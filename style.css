@@ -1,117 +1,131 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  font-family: "Open Sans", sans-serif;
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Mulish", sans-serif;
+  --bgc-body: linear-gradient(
+    180deg,
+    rgb(227, 255, 248, 0) 82.08%,
+    rgb(227, 255, 248, 0.38) 100%
+  );
+  --fc-primary: #1f1534;
+  --fc-secondary: #7d7987;
+  --span-color: #89c5cc;
+  --button-fc: white;
+  --button-bgc: #69b99d;
+}
 
-  background: linear-gradient(180deg, rgb(227, 255, 248, 0) 82.08%, rgb(227, 255, 248, 0.38) 100%);
-
+body {
+  font-family: var(--ff-primary);
+  background: var(--bgc-body);
   min-height: 100vh;
 }
 
 .page {
-  width: 1000px;
+  width: 100rem;
   margin: 0 auto;
-  padding-top: 65px;
+  padding-top: 6.5rem;
 }
 
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 55px;
+  margin-bottom: 5.5rem;
 }
 
 .list {
   display: flex;
-  gap: 48px;
+  gap: 4.8rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
+}
+
+a,
+.title {
+  color: var(--fc-primary);
 }
 
 a {
-  color: #1f1534;
   text-decoration: none;
 }
 
 .list .item a {
-    opacity: 0.5;
+  font-size: 1.8rem;
+  opacity: 0.5;
 }
 
 .list .item a:hover {
-  font-weight: bold;
   opacity: 1;
 }
 
 .list,
 .title {
-  font-family: "Mulish", sans-serif;
+  font-family: var(--ff-secondary);
 }
 
-.main {
+main {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .title {
-  font-size: 49px;
-  line-height: 56px;
-  color: #1f1534;
-
+  font-size: 4.9rem;
+  line-height: 5.6rem;
   font-weight: normal;
-
-  width: 490px;
+  width: 49rem;
 }
 
 .title span {
-  color: #89c5cc;
-  font-weight: bold;
+  color: var(--span-color);
 }
 
 .subtitle {
-  font-size: 14px;
-  line-height: 28px;
-  color: #7d7987;
-
-  margin: 40px 0;
+  line-height: 2.8rem;
+  color: var(--fc-secondary);
+  margin: 4rem 0;
 }
 
-.button {
-  color: white;
+.subtitle,
+footer {
+  font-size: 1.4rem;
+}
+
+button {
+  color: var(--button-fc);
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
-
-  background: #69B99D;
+  background: var(--button-bgc);
   border: 0;
   padding: 14px 32px 15px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   border-radius: 4px;
-
   cursor: pointer;
 }
 
-.footer {
-  font-size: 14px;
-  line-height: 28px;
-
+footer {
+  line-height: 2.8rem;
   text-align: center;
-
-  margin-top: 80px;
+  margin-top: 8rem;
 }
 
-.footer a {
+.list .item a:hover,
+.title span,
+footer a {
   font-weight: bold;
 }
 
 #balls {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
